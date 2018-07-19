@@ -1,0 +1,24 @@
+<div class="container" style="background-color: #ffffff;">
+    <article class="article" *ngIf="article">
+        <header>
+            <h1>{{article.fl_title}}</h1>
+            <dl class="dl-inline">
+                <dt>属性</dt>
+                <dd>值</dd>
+            </dl>
+            <div class="abstract">
+                <p>摘要信息</p>
+            </div>
+        </header>
+        <section class="content">
+            <p [innerHTML]="article.fl_content"></p>
+        </section>
+        <footer>
+            <ul class="pager pager-justify">
+                <li class="previous"><a (click)="getLastArticle()"><i class="icon-arrow-left"></i> 上一篇</a></li>
+                <li><a href="#"><i class="icon-list-ul"></i> 目录</a></li>
+                <li class="next disabled"><a href="#">没有下一篇 <i class="icon-arrow-right"></i></a></li>
+            </ul>
+        </footer>
+    </article>
+</div>

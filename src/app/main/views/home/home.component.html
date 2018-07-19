@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 areas" style="background-color: #ffffff">
+            <ul>
+                <li class="active">推荐</li>
+                <li *ngFor="let area of areas">{{area.area}}</li>
+            </ul>
+        </div>
+        <div class="col-md-7">
+            <div class="advertisement">
+                <img src="../../../../assets/adver.jpg" />
+            </div>
+            <div class="list">
+                <ul>
+                    <li *ngFor="let article of articles">
+                        <h3 class="title">
+                            <a href="/app/detail/{{article.fl_sid}}" target="_blank">{{article.fl_title}}</a></h3>
+                        <small><a href="{{article.fl_url}}">原始链接</a></small>
+                        <div class="content">{{article.fl_content}}</div>
+                        <div class="others">{{article.headimg}}{{article.fl_site_name}} · <span class="gray">{{article.fl_publish_time}}</span></div>
+                    </li>
+                </ul>
+                <app-pagination (fromChild)="getPageNumber($event)" totalPage="{{allPage}}"></app-pagination>
+                <!-- <ul class="pager" #myPager data-ride="pager" data-page="2" data-rec-total="89" data-max-nav-count="4"></ul> -->
+            </div>
+        </div>
+        <div class="col-md-3" style="background-color: #ffffff">
+            今日推荐
+        </div>
+    </div>
+</div>
