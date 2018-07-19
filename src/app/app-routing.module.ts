@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { MainModule } from './main/main.module';
-
+import { LoginModule } from './login/login.module';
 const routes: Routes = [
     {
         path: 'app',
@@ -11,6 +11,10 @@ const routes: Routes = [
         // loadChildren: 'app/main/main.module#MainModule',
         // loadChildren: 'app/main/main.module#MainModule',
         loadChildren: () => MainModule
+    },
+    {
+        path: 'login',
+        loadChildren: () => LoginModule
     },
 
     {

@@ -15,7 +15,7 @@
                     <li *ngFor="let article of articles">
                         <h3 class="title">
                             <a href="/app/detail/{{article.fl_sid}}" target="_blank">{{article.fl_title}}</a></h3>
-                        <small><a href="{{article.fl_url}}">原始链接</a></small>
+                        <!-- <small><a href="{{article.fl_url}}">原始链接</a></small> -->
                         <div class="content">{{article.fl_content}}</div>
                         <div class="others">{{article.headimg}}{{article.fl_site_name}} · <span class="gray">{{article.fl_publish_time}}</span></div>
                     </li>
